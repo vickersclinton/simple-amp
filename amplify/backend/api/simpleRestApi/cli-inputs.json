@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/item/{itemId}": {
+      "name": "/item/{itemId}",
+      "lambdaFunction": "simpleAmpLambda",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

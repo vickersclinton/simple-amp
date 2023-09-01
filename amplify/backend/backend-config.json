@@ -1,0 +1,43 @@
+{
+  "api": {
+    "simpleRestApi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "simpleAmpLambda"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "simpleAmpLambda": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_simpleAmpLambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "simpleAmpLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_simpleAmpLambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "simpleAmpLambda"
+        }
+      ]
+    }
+  }
+}
